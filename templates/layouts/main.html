@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>This is a tutorial </title>
+        <meta name="description" content="I present to you a free tutorial for developing a mobile friendly app"/>
+        <meta name="keywords" content="Tutorial, Mobile,  Free"/>
+        <meta name="author" content="<author>" />
+        <meta name="copyright" content="<author>" />
+        <meta name="robots" content="index"/>
+        <meta name="robots" content="follow"/>
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+
+
+        <link rel="stylesheet" href="./static/css/normalize.css"/>
+        <link rel="stylesheet" href="./static/css/skeleton.css"/>
+        <link rel="stylesheet" href="./static/css/style.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+    <body>
+    <div class="container">
+        <div class="topnav" id="myTopnav">
+            <a href="/" class="active">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Example
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/Example1">Example 1 </a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+            <div style="clear: both">
+                &nbsp;
+
+                {% block content%}{% endblock %}
+
+            </div>
+
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+        </div>
+    </body>
+</html>
