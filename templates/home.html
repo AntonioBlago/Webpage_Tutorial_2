@@ -1,11 +1,25 @@
 {% extends "layouts/main.html" %}
 
+{% block head %}
+<script src="//cdn.plot.ly/plotly-latest.min.js"></script>
+{% endblock %}
+
 {% block content%}
 
 
 </body>
 
 <h5>{{greetings}}</h5>
+
+<div>
+    <div id="plotly-stock-candle"></div>
+
+            <script>
+                //Parse your Json variable here
+                var graphs = {{ plotly_plot | safe }};
+                Plotly.plot('plotly-stock-candle', graphs, {});
+            </script>
+</div>
 
 </body>
 
